@@ -1,4 +1,4 @@
-Reconhecimento Facial com VGG faces e BALLTREE
+Reconhecimento Facial com VGG faces e BallTree
 =============
 
 #### Esse é que abstrai o processo de reconhecimento facial com o modelo VGG faces e o classificador BallTree.
