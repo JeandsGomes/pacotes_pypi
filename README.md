@@ -19,7 +19,7 @@ Reconhecimento Facial com VGG faces e BallTree
 
 ### Inicializando o modelo
 #### é nescessario o caminho para o arquivo vgg_face_weights.h3
-#### você pode baixar o arquivo nesse link [Google](https://drive.google.com/file/d/1yMLtU3tcfp7hVwoMt6JIPnG0MvXVwTEs/view?usp=sharing)
+#### você pode baixar o arquivo nesse link [vgg face weights](https://drive.google.com/file/d/1yMLtU3tcfp7hVwoMt6JIPnG0MvXVwTEs/view?usp=sharing)
 
     '''
     r_f = Face_Recognition('.../Reconhecimento_Facial/vgg_face_weights.h5')
