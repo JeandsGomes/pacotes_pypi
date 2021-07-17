@@ -5,7 +5,9 @@ Reconhecimento Facial com VGG faces e BallTree
 
 ## Instalação:
 
-    'pip install filterRomuere'
+    '
+    pip install filterRomuere
+    '
 
 ## Uso:
 
@@ -20,8 +22,8 @@ Reconhecimento Facial com VGG faces e BallTree
 #### você pode baixar o arquivo nesse link [Google](https://drive.google.com/file/d/1yMLtU3tcfp7hVwoMt6JIPnG0MvXVwTEs/view?usp=sharing)
 
     '''
-        r_f = Face_Recognition('.../Reconhecimento_Facial/vgg_face_weights.h5')
-        r_f.criando_modelo()
+    r_f = Face_Recognition('.../Reconhecimento_Facial/vgg_face_weights.h5')
+    r_f.criando_modelo()
     '''
 
 ### Formatar o caminho do diretorio para importar o banco de dados
@@ -32,8 +34,8 @@ Reconhecimento Facial com VGG faces e BallTree
 3. quantidade_de_fotos_para_teste : quantidade de fotos armazenadas no banoco de teste.
     
     '''
-        diretorio = '.../base_de_dados/'
-        dicionario_treino_teste = r_f.dicionario_diretorio_treino_teste(diretorio,quantidade_de_fotos_para_treino,quantidade_de_fotos_para_teste)
+    diretorio = '.../base_de_dados/'
+    dicionario_treino_teste = r_f.dicionario_diretorio_treino_teste(diretorio,quantidade_de_fotos_para_treino,quantidade_de_fotos_para_teste)
     '''
 
 ### Formatar o banco de dados
@@ -42,7 +44,7 @@ Reconhecimento Facial com VGG faces e BallTree
 1. dicionario_treino_teste : resultado retornado da função dicionario_diretorio_treino_teste
 
     '''
-        base_treino = r_f.extracao_de_caracteristicas_diretorio_treino(dicionario_treino_teste)
+    base_treino = r_f.extracao_de_caracteristicas_diretorio_treino(dicionario_treino_teste)
     '''
 
 #### A função extracao_de_caracteristicas_diretorio_teste vai retornar uma lista com as caracteristicas das fotos do banco de teste.
@@ -50,7 +52,7 @@ Reconhecimento Facial com VGG faces e BallTree
 1. dicionario_treino_teste : resultado retornado da função dicionario_diretorio_treino_teste
 
     '''
-        base_teste = r_f.extracao_de_caracteristicas_diretorio_teste(dicionario_treino_teste)
+    base_teste = r_f.extracao_de_caracteristicas_diretorio_teste(dicionario_treino_teste)
     '''
 
 ### Classificar o banco de dados teste
@@ -60,7 +62,7 @@ Reconhecimento Facial com VGG faces e BallTree
 2. base_teste : base de teste.
 
     '''
-        classificacao = r_f.resultados_da_classificacao(base_treino,base_teste)
+    classificacao = r_f.resultados_da_classificacao(base_treino,base_teste)
     '''
 
 ### Reultados da classificação da base de dados teste
@@ -70,7 +72,7 @@ Reconhecimento Facial com VGG faces e BallTree
 2. base_teste : base de teste.
 
     '''
-        r_f.resultado_dos_teste_percentual_acertos(classificacao,base_teste)
+    r_f.resultado_dos_teste_percentual_acertos(classificacao,base_teste)
     '''
 
 ### Reconhecimneto de uma foto
@@ -80,8 +82,8 @@ Reconhecimento Facial com VGG faces e BallTree
 2. image_path : caminho para o diretorio da imagem que deseja identificar.
 
     '''
-        image_path = '.../5.pgm'
-        r_f.resultados_do_reconhecimento_de_uma_foto(base_treino,image_path)
+    image_path = '.../5.pgm'
+    r_f.resultados_do_reconhecimento_de_uma_foto(base_treino,image_path)
     '''
 
 ### Adicionar individuo a base de dados
@@ -91,8 +93,8 @@ Reconhecimento Facial com VGG faces e BallTree
 2. diretorio_individuo_para_adicionar : caminho para o diretorio do individuo que deseja adicionar.
 
     '''
-        individuo_para_adicionar = '.../Jeanderson/'
-        r_f.adicionando_individuos_a_base_treino(base_de_dados,diretorio_individuo_para_adicionar)
+    individuo_para_adicionar = '.../Jeanderson/'
+    r_f.adicionando_individuos_a_base_treino(base_de_dados,diretorio_individuo_para_adicionar)
     '''
 
 ### Remover individuo a base de dados
@@ -102,5 +104,5 @@ Reconhecimento Facial com VGG faces e BallTree
 2. identificador_do_individuo : identificador usado na base de dados.
 
     '''
-        r_f.remover_individuos_a_base_treino(base_treino,identificador_do_individuo)
+    r_f.remover_individuos_a_base_treino(base_treino,identificador_do_individuo)
     '''
