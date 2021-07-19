@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/Face_Recognition/Face_Recognition.py
+src/Face_Recognition/__init__.py
+src/face_Recogniti.egg-info/PKG-INFO
+src/face_Recogniti.egg-info/SOURCES.txt
+src/face_Recogniti.egg-info/dependency_links.txt
+src/face_Recogniti.egg-info/top_level.txt

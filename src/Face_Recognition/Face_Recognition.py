@@ -27,11 +27,8 @@ class Face_Recognition():
     pasta_banco_de_dados/individuo_fransisco/foto_1_de_fransisco, pasta_banco_de_dados/individuo_fransisco/foto_2_de_fransisco, ...
   '''
 
-  def __init__(self,diretorio_do_modelo):
-    physical_devices = tf.config.experimental.list_physical_devices('GPU')
-    print("physical_devices-------------", len(physical_devices))
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
-    self.diretorio_do_modelo = diretorio_do_modelo
+  def __init__(self):
+    pass
 
   #recxorte de rostos
 
@@ -83,12 +80,18 @@ class Face_Recognition():
     return img
 
 
-  def loadVggFaceModel(self):
+  def loadVggFaceModel(self,diretorio_do_modelo):
     '''
       Para inicializar o modeno CNN VGG faces, para posteriormente extrair as caracteristicas da foto.
 
       :retorna o modelo pronto paara extrarir as caracteristicas.
     '''
+    physical_devices = tf.config.experimental.list_physical_devices('GPU')
+    print("physical_devices-------------", len(physical_devices))
+    tf.config.experimental.set_memory_growth(physical_devices[0], True)
+    self.diretorio_do_modelo = diretorio_do_modelo
+
+
     model = Sequential()
     model.add(ZeroPadding2D((1,1),input_shape=(224,224, 3)))
     model.add(Convolution2D(64, (3, 3), activation='relu'))
@@ -148,11 +151,11 @@ class Face_Recognition():
       return None
 
 
-  def criando_modelo(self):
+  def criando_modelo(self,diretorio_do_modelo):
     '''
       Para servir de interface onde é chamada a função que cria o modelo e armazena esse modelo nas informações do objeto.
     '''
-    self.model = self.loadVggFaceModel()
+    self.model = self.loadVggFaceModel(diretorio_do_modelo)
 
   def lista_individuo_treino(self,diretorio,qunatidade_de_trieno):
     '''

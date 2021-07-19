@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: face-Recogniti
+Version: 0.0.1.1
+Summary: Abstrair o processo de reconhecimento facial com o modelo CNN Vgg Faces.
+Home-page: https://github.com/JeandsGomes/pacotes_pypi.git
+Author: Jeanderson Gomes, José fernando
+Author-email: jeandsgomes10@ufpi.edu.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 Reconhecimento Facial com VGG faces e BallTree
 =============
 
@@ -106,3 +122,5 @@ Reconhecimento Facial com VGG faces e BallTree
     '''
     r_f.remover_individuos_a_base_treino(base_treino,identificador_do_individuo)
     '''
+
+
